@@ -1,0 +1,6 @@
+packages:
+  - {path: readme.md, title: "Packages"}
+  - {path: lottie.md, title: "Lottie"}
+  - {path: animation-control.md, title: "AnimationControl"}
+  - {path: composition-animated-control.md, title: "CompositionAnimatedControl"}
+  - {path: shader-animated-control.md, title: "ShaderAnimatedControl"}
