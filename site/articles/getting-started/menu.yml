@@ -1,0 +1,4 @@
+getting-started:
+  - {path: readme.md, title: "Getting Started"}
+  - {path: installation.md, title: "Installation"}
+  - {path: quickstart-lottie.md, title: "Quickstart: Lottie Player"}

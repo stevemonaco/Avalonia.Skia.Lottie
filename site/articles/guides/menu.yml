@@ -1,0 +1,5 @@
+guides:
+  - {path: readme.md, title: "Guides"}
+  - {path: asset-loading-and-seeking.md, title: "Asset Loading and Seeking"}
+  - {path: shader-uniform-binding.md, title: "Shader Uniform Binding"}
+  - {path: troubleshooting.md, title: "Troubleshooting"}

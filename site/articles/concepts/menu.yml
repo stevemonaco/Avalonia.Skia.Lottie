@@ -1,0 +1,4 @@
+concepts:
+  - {path: readme.md, title: "Concepts"}
+  - {path: rendering-stack.md, title: "Rendering Stack"}
+  - {path: playback-and-redraw.md, title: "Playback and Redraw Model"}

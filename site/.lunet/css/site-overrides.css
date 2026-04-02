@@ -1,0 +1,316 @@
+/* Lottie for Avalonia brand polish on top of Lunet template defaults. */
+
+:root {
+  --lottie-accent: #ff6b35;
+  --lottie-accent-strong: #d9480f;
+  --lottie-accent-soft: #fff1eb;
+  --lottie-secondary: #0f766e;
+  --lottie-secondary-soft: #e6fffb;
+  --lottie-highlight: #14b8a6;
+  --lottie-card-radius: 16px;
+  --lottie-shadow-soft: 0 12px 30px rgba(15, 23, 42, 0.08);
+  --lottie-shadow-strong: 0 18px 42px rgba(15, 23, 42, 0.14);
+}
+
+:root[data-bs-theme="dark"] {
+  --lottie-accent: #ff8a5b;
+  --lottie-accent-strong: #ffb08a;
+  --lottie-accent-soft: rgba(255, 107, 53, 0.14);
+  --lottie-secondary: #5eead4;
+  --lottie-secondary-soft: rgba(20, 184, 166, 0.16);
+  --lottie-highlight: #99f6e4;
+  --lottie-shadow-soft: 0 14px 32px rgba(0, 0, 0, 0.28);
+  --lottie-shadow-strong: 0 18px 46px rgba(0, 0, 0, 0.4);
+}
+
+body {
+  min-height: 100vh;
+  background-image:
+    radial-gradient(circle at top left, color-mix(in srgb, var(--lottie-accent) 14%, transparent), transparent 36%),
+    radial-gradient(circle at top right, color-mix(in srgb, var(--lottie-secondary) 12%, transparent), transparent 34%);
+}
+
+#lunet {
+  max-width: 1460px;
+}
+
+#lunet .lunet-logo {
+  width: auto;
+  height: 72px;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.12));
+}
+
+#lunet .navbar {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--bs-border-color) 82%, transparent);
+  backdrop-filter: saturate(125%) blur(6px);
+}
+
+#lunet .navbar .nav-link {
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+#lunet .navbar .nav-link:hover {
+  background: color-mix(in srgb, var(--lottie-secondary) 14%, transparent);
+}
+
+#lunet li.nav-item.active {
+  border-bottom: none;
+}
+
+#lunet li.nav-item.active > .nav-item-row > .nav-link {
+  color: var(--lottie-accent-strong);
+  background: color-mix(in srgb, var(--lottie-accent) 16%, transparent);
+}
+
+#lunet .navbar .lunet-search .input-group {
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--bs-border-color) 75%, transparent);
+  border-radius: 0.7rem;
+}
+
+#lunet .lunet-theme-toggle {
+  border-radius: 0.7rem;
+}
+
+#lunet .navbar-right .btn-info {
+  border-radius: 0.7rem;
+  border-color: color-mix(in srgb, var(--lottie-secondary) 45%, var(--bs-border-color));
+  background: color-mix(in srgb, var(--lottie-secondary) 22%, transparent);
+  color: var(--bs-body-color);
+}
+
+#lunet .navbar-right .btn-info:hover {
+  background: color-mix(in srgb, var(--lottie-secondary) 34%, transparent);
+}
+
+#lunet .menu,
+#lunet .breadcrumb {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+#lunet .menu .menu {
+  margin-top: 0.35rem;
+  margin-left: 0.8rem;
+  padding-left: 0.8rem;
+  border-left: 1px solid color-mix(in srgb, var(--bs-border-color) 75%, transparent);
+}
+
+#lunet .menu-item {
+  margin: 0.1rem 0;
+}
+
+#lunet .menu-link,
+#lunet .breadcrumb-link {
+  text-decoration: none;
+}
+
+#lunet .menu-link:hover,
+#lunet .breadcrumb-link:hover {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+
+#lunet .menu-item.active > .menu-item-row > .menu-link {
+  font-weight: 600;
+  color: var(--lottie-accent-strong);
+}
+
+#docs-sidebar-menu.menu-sidebar,
+#docs-sidebar-toc.menu-sidebar {
+  max-height: calc(100vh - 6.25rem);
+  overflow: auto;
+  padding-bottom: 1rem;
+  border: 1px solid color-mix(in srgb, var(--bs-border-color) 80%, transparent);
+  border-radius: var(--lottie-card-radius);
+  box-shadow: var(--lottie-shadow-soft);
+}
+
+#docs-sidebar-menu .offcanvas-body,
+#docs-sidebar-toc {
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--bs-body-bg) 92%, var(--lottie-accent-soft)), color-mix(in srgb, var(--bs-body-bg) 96%, var(--lottie-secondary-soft)));
+}
+
+#docs-sidebar-toc .js-toc {
+  font-size: 0.92rem;
+}
+
+#docs-sidebar-toc .toc-list {
+  margin: 0;
+  padding-left: 0.85rem;
+  list-style: none;
+}
+
+#docs-sidebar-toc .toc-link {
+  text-decoration: none;
+  color: var(--bs-body-color);
+}
+
+#docs-sidebar-toc .is-active-link {
+  font-weight: 700;
+  color: var(--lottie-accent-strong);
+}
+
+#lunet .lunet-articles .js-toc-content,
+#lunet .lunet-api .js-toc-content {
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--bs-body-bg) 95%, var(--lottie-accent-soft)), color-mix(in srgb, var(--bs-body-bg) 97%, var(--lottie-secondary-soft)));
+  border: 1px solid color-mix(in srgb, var(--bs-border-color) 80%, transparent);
+  border-radius: var(--lottie-card-radius);
+  padding: 1.25rem 1.3rem 1.4rem;
+  box-shadow: var(--lottie-shadow-soft);
+}
+
+#lunet h1 {
+  letter-spacing: -0.02em;
+}
+
+#lunet h2 {
+  margin-top: 1.6rem;
+}
+
+#lunet h1,
+#lunet h2,
+#lunet h3 {
+  scroll-margin-top: 7rem;
+}
+
+#lunet blockquote {
+  border-radius: 0.6rem;
+  border-left-width: 4px;
+}
+
+#lunet pre[class*="language-"] {
+  border: 1px solid color-mix(in srgb, var(--bs-border-color) 80%, transparent);
+  border-radius: 0.8rem;
+}
+
+#lunet :focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--lottie-highlight) 70%, white);
+  outline-offset: 2px;
+}
+
+.lunet-home .container {
+  max-width: 1160px;
+}
+
+.lottie-hero {
+  border: 1px solid color-mix(in srgb, var(--bs-border-color) 80%, transparent);
+  border-radius: 24px;
+  padding: clamp(1.4rem, 2vw, 2rem);
+  background:
+    radial-gradient(circle at top right, color-mix(in srgb, var(--lottie-accent) 18%, transparent), transparent 40%),
+    linear-gradient(150deg, color-mix(in srgb, var(--lottie-secondary) 14%, transparent), transparent 42%);
+  box-shadow: var(--lottie-shadow-strong);
+}
+
+.lottie-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--lottie-accent-strong);
+}
+
+.lottie-hero-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.95fr);
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.lottie-hero .lead {
+  max-width: 68ch;
+}
+
+.lottie-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.lottie-hero-actions .btn-primary {
+  background: linear-gradient(135deg, var(--lottie-accent), var(--lottie-secondary));
+  border-color: color-mix(in srgb, var(--lottie-accent) 60%, var(--lottie-secondary));
+}
+
+.lottie-hero-actions .btn-primary:hover {
+  background: linear-gradient(135deg, var(--lottie-accent-strong), var(--lottie-secondary));
+  border-color: var(--lottie-accent-strong);
+}
+
+.lottie-hero-media {
+  display: flex;
+  justify-content: center;
+}
+
+.lottie-hero-media img {
+  max-width: 100%;
+  border-radius: 18px;
+  border: 1px solid color-mix(in srgb, var(--bs-border-color) 80%, transparent);
+  box-shadow: var(--lottie-shadow-soft);
+  background: color-mix(in srgb, var(--bs-body-bg) 88%, white);
+}
+
+.lottie-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem;
+  margin-top: 0.7rem;
+}
+
+.lottie-card-grid--wide {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.lottie-card {
+  display: block;
+  height: 100%;
+  padding: 1rem 1rem 1.05rem;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 18px;
+  border: 1px solid color-mix(in srgb, var(--bs-border-color) 82%, transparent);
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--bs-body-bg) 92%, var(--lottie-accent-soft)), color-mix(in srgb, var(--bs-body-bg) 96%, var(--lottie-secondary-soft)));
+  box-shadow: var(--lottie-shadow-soft);
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.lottie-card:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--lottie-accent) 35%, var(--bs-border-color));
+  box-shadow: var(--lottie-shadow-strong);
+  text-decoration: none;
+}
+
+.lottie-card-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 700;
+  margin-bottom: 0.45rem;
+}
+
+.lottie-card p {
+  margin: 0;
+  color: color-mix(in srgb, var(--bs-body-color) 88%, transparent);
+}
+
+@media (max-width: 920px) {
+  .lottie-hero-split {
+    grid-template-columns: 1fr;
+  }
+
+  .lottie-hero-media {
+    order: -1;
+  }
+}
