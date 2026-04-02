@@ -1,0 +1,7 @@
+reference:
+  - {path: readme.md, title: "Reference"}
+  - {path: packages-and-namespaces.md, title: "Packages and Namespaces"}
+  - {path: api-coverage-index.md, title: "API Coverage Index"}
+  - {path: sample-apps.md, title: "Sample Apps"}
+  - {path: lunet-docs-pipeline.md, title: "Lunet Docs Pipeline"}
+  - {path: license.md, title: "License"}
