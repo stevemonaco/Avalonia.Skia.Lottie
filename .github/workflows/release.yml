@@ -167,9 +167,13 @@ jobs:
       - name: Pack
         shell: bash
         run: |
-          dotnet pack -c Release --no-build -o artifacts/packages \
-            -p:VersionPrefix="${{ needs.prepare.outputs.version-prefix }}" \
-            -p:VersionSuffix="${{ needs.prepare.outputs.version-suffix }}"
+          mkdir -p artifacts/packages
+          for project in src/*/*.csproj; do
+            echo "Packing $project..."
+            dotnet pack "$project" -c Release --no-build --no-restore -o artifacts/packages \
+              -p:VersionPrefix="${{ needs.prepare.outputs.version-prefix }}" \
+              -p:VersionSuffix="${{ needs.prepare.outputs.version-suffix }}"
+          done
 
       - name: Upload NuGet packages
         uses: actions/upload-artifact@v4
@@ -196,7 +200,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          global-json-file: global.json
+          dotnet-version: '10.0.x'
 
       - name: Publish to NuGet
         shell: bash
