@@ -19,6 +19,10 @@ site_project_twitter_user = "wieslawsoltes"
 
 site_project_init
 
+with menu
+    async_load_threshold = 0
+end
+
 # macOS 15 + lunet 1.0.10 has a Dart Sass platform detection bug.
 # Use a custom precompiled bundle until SCSS processing is fixed upstream.
 with bundle "lite"
@@ -34,7 +38,6 @@ with bundle "lite"
     css "/css/template-main.css"
     css "/css/site-overrides.css"
 
-    js "/modules/menus/lunet-menu-async.js"
     js "/modules/api/dotnet/lunet-api-dotnet-ui.js"
     js bootstrap "/dist/js/bootstrap.bundle.min.js"
     js anchorjs "/anchor.min.js"
