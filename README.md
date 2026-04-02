@@ -2,14 +2,16 @@
 
 [![CI](https://github.com/wieslawsoltes/Avalonia.Skia.Lottie/actions/workflows/build.yml/badge.svg)](https://github.com/wieslawsoltes/Avalonia.Skia.Lottie/actions/workflows/build.yml)
 
-[![NuGet](https://img.shields.io/nuget/v/Lottie.svg)](https://www.nuget.org/packages/Lottie)
-[![NuGet](https://img.shields.io/nuget/dt/Lottie.svg)](https://www.nuget.org/packages/Lottie)
-
-[![NuGet](https://img.shields.io/nuget/v/AnimationControl.svg)](https://www.nuget.org/packages/AnimationControl)
-[![NuGet](https://img.shields.io/nuget/v/CompositionAnimatedControl.svg)](https://www.nuget.org/packages/CompositionAnimatedControl)
-[![NuGet](https://img.shields.io/nuget/v/ShaderAnimatedControl.svg)](https://www.nuget.org/packages/ShaderAnimatedControl)
-
 A collection of animation controls for Avalonia including Lottie animation player and reusable base controls for custom animations.
+
+## Packages
+
+| Package | NuGet | Downloads | Description |
+| --- | --- | --- | --- |
+| [Lottie](https://www.nuget.org/packages/Lottie) | [![NuGet](https://img.shields.io/nuget/v/Lottie.svg)](https://www.nuget.org/packages/Lottie) | [![NuGet downloads](https://img.shields.io/nuget/dt/Lottie.svg)](https://www.nuget.org/packages/Lottie) | An lottie animation player control for Avalonia. |
+| [AnimationControl](https://www.nuget.org/packages/AnimationControl) | [![NuGet](https://img.shields.io/nuget/v/AnimationControl.svg)](https://www.nuget.org/packages/AnimationControl) | [![NuGet downloads](https://img.shields.io/nuget/dt/AnimationControl.svg)](https://www.nuget.org/packages/AnimationControl) | Reusable animation control base class for Avalonia applications. |
+| [CompositionAnimatedControl](https://www.nuget.org/packages/CompositionAnimatedControl) | [![NuGet](https://img.shields.io/nuget/v/CompositionAnimatedControl.svg)](https://www.nuget.org/packages/CompositionAnimatedControl) | [![NuGet downloads](https://img.shields.io/nuget/dt/CompositionAnimatedControl.svg)](https://www.nuget.org/packages/CompositionAnimatedControl) | Reusable composition-backed Skia control for static and animated rendering in Avalonia. |
+| [ShaderAnimatedControl](https://www.nuget.org/packages/ShaderAnimatedControl) | [![NuGet](https://img.shields.io/nuget/v/ShaderAnimatedControl.svg)](https://www.nuget.org/packages/ShaderAnimatedControl) | [![NuGet downloads](https://img.shields.io/nuget/dt/ShaderAnimatedControl.svg)](https://www.nuget.org/packages/ShaderAnimatedControl) | Reusable Skia shader-based animated control for Avalonia. |
 
 ## Controls
 
