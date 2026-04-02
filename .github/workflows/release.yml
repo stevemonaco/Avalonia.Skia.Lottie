@@ -167,13 +167,9 @@ jobs:
       - name: Pack
         shell: bash
         run: |
-          mkdir -p artifacts/packages
-          for project in src/*/*.csproj; do
-            echo "Packing $project..."
-            dotnet pack "$project" -c Release --no-build --no-restore -o artifacts/packages \
-              -p:VersionPrefix="${{ needs.prepare.outputs.version-prefix }}" \
-              -p:VersionSuffix="${{ needs.prepare.outputs.version-suffix }}"
-          done
+          dotnet pack Avalonia.Skia.Lottie.sln -c Release --no-build --no-restore -o artifacts/packages \
+            -p:VersionPrefix="${{ needs.prepare.outputs.version-prefix }}" \
+            -p:VersionSuffix="${{ needs.prepare.outputs.version-suffix }}"
 
       - name: Upload NuGet packages
         uses: actions/upload-artifact@v4
