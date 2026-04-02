@@ -1,5 +1,4 @@
 using Avalonia;
-using Avalonia.ReactiveUI;
 
 namespace AnimationControlDemo;
 
@@ -17,6 +16,5 @@ internal class Program
         => AppBuilder.Configure<App>()
             .UsePlatformDetect()
             .WithInterFont()
-            .LogToTrace()
-            .UseReactiveUI();
+            .LogToTrace();
 }
