@@ -258,6 +258,9 @@ _Pvt_Extensions
 
 # Paket dependency manager
 .paket/paket.exe
+
+# Lunet generated output
+site/.lunet/build/
 paket-files/
 
 # FAKE - F# Make
