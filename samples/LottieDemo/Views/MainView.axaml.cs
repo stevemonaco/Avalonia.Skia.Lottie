@@ -1,9 +1,10 @@
 ﻿using System.Linq;
 using Avalonia;
 using Avalonia.Controls;
-using Avalonia.Input;
 using LottieDemo.ViewModels;
+using Avalonia.Input;
 using Avalonia.Interactivity;
+using Avalonia.Platform.Storage;
 
 namespace LottieDemo.Views;
 
@@ -50,7 +51,7 @@ public partial class MainView : UserControl
     {
         e.DragEffects &= DragDropEffects.Copy | DragDropEffects.Link;
 
-        if (!e.Data.Contains(DataFormats.Files))
+        if (!e.DataTransfer.Contains(DataFormat.File))
         {
             e.DragEffects = DragDropEffects.None;
         }
@@ -58,7 +59,7 @@ public partial class MainView : UserControl
 
     private void Drop(object? sender, DragEventArgs e)
     {
-        if (!e.Data.Contains(DataFormats.Files))
+        if (!e.DataTransfer.Contains(DataFormat.File))
         {
             return;
         }
@@ -68,7 +69,11 @@ public partial class MainView : UserControl
             return;
         }
 
-        var paths = e.Data.GetFileNames()?.ToList();
+        var paths = e.DataTransfer.TryGetFiles()?
+            .Select(file => file.TryGetLocalPath())
+            .Where(path => !string.IsNullOrWhiteSpace(path))
+            .Cast<string>()
+            .ToList();
         if (paths is null)
         {
             return;

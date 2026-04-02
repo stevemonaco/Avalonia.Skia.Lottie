@@ -91,12 +91,12 @@ public class Lottie : CompositionAnimatedControl
         /// <summary>
         /// Pauses playback.
         /// </summary>
-        public void Pause() => base.Pause();
+        public new void Pause() => base.Pause();
 
         /// <summary>
         /// Seek to a specific absolute time position.
         /// </summary>
-        public void Seek(TimeSpan position) => base.Seek(position);
+        public new void Seek(TimeSpan position) => base.Seek(position);
 
         /// <summary>
         /// Seek to a specific position given in seconds.

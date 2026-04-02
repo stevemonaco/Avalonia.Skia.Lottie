@@ -2,9 +2,9 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
-using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Input;
+using Avalonia.Platform.Storage;
 using SkiaSharp;
 
 namespace LottieToSvg;
@@ -14,9 +14,6 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
-#if DEBUG
-        this.AttachDevTools();
-#endif
         AddHandler(DragDrop.DragOverEvent, DragOver);
         AddHandler(DragDrop.DropEvent, Drop);
     }
@@ -25,7 +22,7 @@ public partial class MainWindow : Window
     {
         e.DragEffects &= DragDropEffects.Copy | DragDropEffects.Link;
 
-        if (!e.Data.Contains(DataFormats.Files))
+        if (!e.DataTransfer.Contains(DataFormat.File))
         {
             e.DragEffects = DragDropEffects.None;
         }
@@ -33,12 +30,16 @@ public partial class MainWindow : Window
 
     private async void Drop(object? sender, DragEventArgs e)
     {
-        if (!e.Data.Contains(DataFormats.Files))
+        if (!e.DataTransfer.Contains(DataFormat.File))
         {
             return;
         }
 
-        var paths = e.Data.GetFileNames()?.ToList();
+        var paths = e.DataTransfer.TryGetFiles()?
+            .Select(file => file.TryGetLocalPath())
+            .Where(path => !string.IsNullOrWhiteSpace(path))
+            .Cast<string>()
+            .ToList();
         if (paths is null || paths.Count <= 0)
         {
             return;
