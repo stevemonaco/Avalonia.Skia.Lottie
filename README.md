@@ -1,6 +1,7 @@
 # Lottie
 
-[![CI](https://github.com/wieslawsoltes/Avalonia.Skia.Lottie/actions/workflows/build.yml/badge.svg)](https://github.com/wieslawsoltes/Avalonia.Skia.Lottie/actions/workflows/build.yml)
+[![CI](https://github.com/wieslawsoltes/Lottie/actions/workflows/build.yml/badge.svg)](https://github.com/wieslawsoltes/Lottie/actions/workflows/build.yml)
+[![Docs](https://img.shields.io/badge/docs-lunet-0b7285.svg)](https://wieslawsoltes.github.io/Lottie/)
 
 A collection of animation controls for Avalonia including Lottie animation player and reusable base controls for custom animations.
 
@@ -12,6 +13,22 @@ A collection of animation controls for Avalonia including Lottie animation playe
 | [AnimationControl](https://www.nuget.org/packages/AnimationControl) | [![NuGet](https://img.shields.io/nuget/v/AnimationControl.svg)](https://www.nuget.org/packages/AnimationControl) | [![NuGet downloads](https://img.shields.io/nuget/dt/AnimationControl.svg)](https://www.nuget.org/packages/AnimationControl) | Reusable animation control base class for Avalonia applications. |
 | [CompositionAnimatedControl](https://www.nuget.org/packages/CompositionAnimatedControl) | [![NuGet](https://img.shields.io/nuget/v/CompositionAnimatedControl.svg)](https://www.nuget.org/packages/CompositionAnimatedControl) | [![NuGet downloads](https://img.shields.io/nuget/dt/CompositionAnimatedControl.svg)](https://www.nuget.org/packages/CompositionAnimatedControl) | Reusable composition-backed Skia control for static and animated rendering in Avalonia. |
 | [ShaderAnimatedControl](https://www.nuget.org/packages/ShaderAnimatedControl) | [![NuGet](https://img.shields.io/nuget/v/ShaderAnimatedControl.svg)](https://www.nuget.org/packages/ShaderAnimatedControl) | [![NuGet downloads](https://img.shields.io/nuget/dt/ShaderAnimatedControl.svg)](https://www.nuget.org/packages/ShaderAnimatedControl) | Reusable Skia shader-based animated control for Avalonia. |
+
+## Documentation
+
+Project documentation is published with Lunet at [wieslawsoltes.github.io/Lottie](https://wieslawsoltes.github.io/Lottie/).
+
+To build the site locally:
+
+```bash
+./build-docs.sh
+```
+
+To preview the site with Lunet watch mode:
+
+```bash
+./serve-docs.sh
+```
 
 ## Controls
 
