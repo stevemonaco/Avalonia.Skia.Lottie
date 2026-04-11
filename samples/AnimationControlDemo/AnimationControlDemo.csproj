@@ -12,6 +12,7 @@
     <PackageReference Include="Avalonia.Themes.Fluent" Version="$(AvaloniaVersion)" />
     <PackageReference Include="Avalonia.Fonts.Inter" Version="$(AvaloniaVersion)" />
     <PackageReference Include="Avalonia.Desktop" Version="$(AvaloniaVersion)" />
+    <PackageReference Include="Tmds.DBus.Protocol" Version="$(TmdsDBusProtocolVersion)" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="../../src/AnimationControl/AnimationControl.csproj" />

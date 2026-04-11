@@ -14,6 +14,7 @@
     <PackageReference Include="Avalonia.Desktop" Version="$(AvaloniaVersion)" />
     <PackageReference Include="Avalonia.Skia" Version="$(AvaloniaVersion)" />
     <PackageReference Include="Box2D.NetStandard" Version="2.4.7-alpha" />
+    <PackageReference Include="Tmds.DBus.Protocol" Version="$(TmdsDBusProtocolVersion)" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="../../src/CompositionAnimatedControl/CompositionAnimatedControl.csproj" />
