@@ -1,8 +1,6 @@
 using System;
 using System.Numerics;
 using Avalonia;
-using Avalonia.Controls.Shapes;
-using Avalonia.Media;
 using Avalonia.Platform;
 using Avalonia.Rendering.Composition;
 using Avalonia.Skia;
@@ -12,10 +10,6 @@ namespace EffectsDemo;
 
 internal class DrawCompositionCustomVisualHandler
 {
-    private bool _running;
-    private Stretch? _stretch;
-    private StretchDirection? _stretchDirection;
-    private Size? _size;
     private readonly object _sync = new();
     private SKPaint? _paint;
     private SKShader? _shader;
