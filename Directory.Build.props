@@ -5,6 +5,7 @@
     <Company>Wiesław Šoltés</Company>
     <Copyright>Copyright © Wiesław Šoltés 2025</Copyright>
     <PackageProjectUrl>https://github.com/wieslawsoltes/Lottie</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
   <PropertyGroup>
     <AnalysisLevel>latest</AnalysisLevel>
@@ -15,4 +16,7 @@
     <SkiaSharpVersion>3.119.3-preview.1.1</SkiaSharpVersion>
     <TmdsDBusProtocolVersion>0.92.0</TmdsDBusProtocolVersion>
   </PropertyGroup>
+  <ItemGroup Condition="'$(IsPackable)' == 'True'">
+    <None Include="$(MSBuildThisFileDirectory)README.md" Link="README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
 </Project>
