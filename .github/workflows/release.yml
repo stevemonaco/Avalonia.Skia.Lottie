@@ -226,7 +226,7 @@ jobs:
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          name: Avalonia.Skia.Lottie ${{ needs.prepare.outputs.version }}
+          name: Lottie ${{ needs.prepare.outputs.version }}
           tag_name: ${{ needs.prepare.outputs.tag-name }}
           target_commitish: ${{ github.sha }}
           draft: false
